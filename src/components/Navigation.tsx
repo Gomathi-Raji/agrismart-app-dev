@@ -161,19 +161,27 @@ export function Navigation() {
 
       {/* Mobile Bottom Navigation */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-card border-t border-border shadow-elegant z-50">
-        <div className="flex justify-around items-center py-2">
+        <div className="grid grid-cols-5 h-[64px]">
           {navItems.slice(0, 3).map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`flex flex-col items-center space-y-1 p-2 rounded-md min-w-[60px] ${
+              className={`flex flex-col items-center justify-center w-[72px] h-full mx-auto ${
                 isActive(item.path)
                   ? "text-primary"
                   : "text-muted-foreground"
               }`}
             >
-              <item.icon className="h-5 w-5" />
-              {item.name && <span className="text-xs font-medium">{item.name}</span>}
+              <div className="h-[28px] flex items-center justify-center">
+                <item.icon className="h-5 w-5 shrink-0" />
+              </div>
+              {item.name && (
+                <div className="h-[20px] w-full flex items-center justify-center">
+                  <span className="text-[10px] font-medium text-center max-w-[64px] truncate leading-none">
+                    {item.name}
+                  </span>
+                </div>
+              )}
             </Link>
           ))}
           
@@ -206,10 +214,14 @@ export function Navigation() {
           {/* More Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex flex-col items-center space-y-1 p-2 rounded-md min-w-[60px] text-muted-foreground"
+            className="flex flex-col items-center justify-center w-[72px] h-full mx-auto text-muted-foreground"
           >
-            <Menu className="h-5 w-5" />
-            <span className="text-xs font-medium">More</span>
+            <div className="h-[28px] flex items-center justify-center">
+              <Menu className="h-5 w-5 shrink-0" />
+            </div>
+            <div className="h-[20px] w-full flex items-center justify-center">
+              <span className="text-[10px] font-medium text-center max-w-[64px] truncate leading-none">More</span>
+            </div>
           </button>
         </div>
       </div>

@@ -6,8 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { 
   Camera, Upload, Scan, AlertCircle, CheckCircle, 
   Award, Share2, Bookmark, ShoppingCart, Star, 
-  Leaf, Sparkles, TrendingUp, Heart, Shield, Calendar
+  Leaf, Sparkles, TrendingUp, Heart, Shield, Calendar,
+  FileDown
 } from "lucide-react";
+import { generateDiagnosisReport } from "@/utils/generatePDF";
 import diseaseImage from "@/assets/crop-disease-detection.jpg";
 
 export default function Diagnose() {
@@ -489,6 +491,24 @@ Be detailed and practical. Focus on actionable advice that farmers can implement
                     <Button variant="outline" size="sm">
                       <Share2 className="h-4 w-4 mr-1" />
                       Share
+                    </Button>
+                    <Button 
+                      onClick={async () => {
+                        if (analysisResult && selectedImage) {
+                          try {
+                            const pdf = await generateDiagnosisReport(analysisResult, selectedImage);
+                            const fileName = `plant-health-report-${new Date().toISOString().split('T')[0]}.pdf`;
+                            pdf.save(fileName);
+                          } catch (error) {
+                            console.error('Error generating PDF:', error);
+                          }
+                        }
+                      }}
+                      variant="outline" 
+                      size="sm"
+                    >
+                      <FileDown className="h-4 w-4 mr-1" />
+                      Download Report
                     </Button>
                   </div>
                 </CardHeader>
