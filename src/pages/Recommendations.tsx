@@ -31,6 +31,11 @@ interface RecommendationResponse {
 export default function Recommendations() {
   const [location, setLocation] = useState('');
   const [soilType, setSoilType] = useState('');
+  const [landSize, setLandSize] = useState('');
+  const [waterSource, setWaterSource] = useState('');
+  const [previousCrops, setPreviousCrops] = useState('');
+  const [budgetRange, setBudgetRange] = useState('');
+  const [farmingExperience, setFarmingExperience] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [recommendations, setRecommendations] = useState<RecommendationResponse | null>(null);
   const [geminiApiKey] = useState('AIzaSyBmlIUNvfTAacQ3K_wb7RDMwKF8Fo2XiaE'); // User-provided API key
@@ -419,18 +424,190 @@ Make sure to follow this exact structure and format for proper parsing.`;
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="soil">Soil Type (Optional)</Label>
+              <Label htmlFor="soil">Current Soil Condition</Label>
               <Select value={soilType} onValueChange={setSoilType}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select soil type" />
+                  <SelectValue placeholder="What type of soil do you have?" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="clay">Clay</SelectItem>
-                  <SelectItem value="sandy">Sandy</SelectItem>
-                  <SelectItem value="loamy">Loamy</SelectItem>
-                  <SelectItem value="silt">Silt</SelectItem>
-                  <SelectItem value="peaty">Peaty</SelectItem>
-                  <SelectItem value="chalky">Chalky</SelectItem>
+                  <SelectItem value="black-cotton">Black Cotton Soil</SelectItem>
+                  <SelectItem value="red">Red Soil</SelectItem>
+                  <SelectItem value="alluvial">Alluvial Soil</SelectItem>
+                  <SelectItem value="sandy-loam">Sandy Loam</SelectItem>
+                  <SelectItem value="clay-loam">Clay Loam</SelectItem>
+                  <SelectItem value="laterite">Laterite Soil</SelectItem>
+                  <SelectItem value="saline">Saline Soil</SelectItem>
+                  <SelectItem value="forest">Forest Soil</SelectItem>
+                  <SelectItem value="arid">Arid Soil</SelectItem>
+                  <SelectItem value="mixed">Mixed Soil</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="landSize">Farm Area</Label>
+              <div className="grid grid-cols-2 gap-2">
+                <Input
+                  id="landSize"
+                  placeholder="Enter area size"
+                  value={landSize}
+                  onChange={(e) => setLandSize(e.target.value)}
+                />
+                <Select defaultValue="acres">
+                  <SelectTrigger>
+                    <SelectValue placeholder="Unit" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="acres">Acres</SelectItem>
+                    <SelectItem value="hectares">Hectares</SelectItem>
+                    <SelectItem value="bigha">Bigha</SelectItem>
+                    <SelectItem value="gunta">Gunta</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="waterSource">Available Water Sources</Label>
+              <Select value={waterSource} onValueChange={setWaterSource}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your water source" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="rainfed">Rainfed Only</SelectItem>
+                  <SelectItem value="bore-well">Bore Well</SelectItem>
+                  <SelectItem value="open-well">Open Well</SelectItem>
+                  <SelectItem value="canal-seasonal">Canal (Seasonal)</SelectItem>
+                  <SelectItem value="canal-perennial">Canal (Perennial)</SelectItem>
+                  <SelectItem value="river-seasonal">River (Seasonal)</SelectItem>
+                  <SelectItem value="river-perennial">River (Perennial)</SelectItem>
+                  <SelectItem value="tank">Farm Pond/Tank</SelectItem>
+                  <SelectItem value="drip">Drip Irrigation</SelectItem>
+                  <SelectItem value="sprinkler">Sprinkler System</SelectItem>
+                  <SelectItem value="multiple">Multiple Sources</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="previousCrops">Previous Season's Crops</Label>
+              <Select value={previousCrops} onValueChange={setPreviousCrops}>
+                <SelectTrigger>
+                  <SelectValue placeholder="What did you grow last season?" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="rice">Paddy/Rice</SelectItem>
+                  <SelectItem value="wheat">Wheat</SelectItem>
+                  <SelectItem value="cotton">Cotton</SelectItem>
+                  <SelectItem value="sugarcane">Sugarcane</SelectItem>
+                  <SelectItem value="maize">Maize/Corn</SelectItem>
+                  <SelectItem value="pulses">Pulses</SelectItem>
+                  <SelectItem value="oilseeds">Oilseeds</SelectItem>
+                  <SelectItem value="vegetables">Vegetables</SelectItem>
+                  <SelectItem value="fruits">Fruits</SelectItem>
+                  <SelectItem value="spices">Spices</SelectItem>
+                  <SelectItem value="fallow">Fallow Land</SelectItem>
+                  <SelectItem value="multiple">Multiple Crops</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="budgetRange">Investment Capacity (per acre)</Label>
+              <Select value={budgetRange} onValueChange={setBudgetRange}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Select your budget range" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="very-low">Less than ₹25,000</SelectItem>
+                  <SelectItem value="low">₹25,000 - ₹50,000</SelectItem>
+                  <SelectItem value="medium">₹50,000 - ₹1,00,000</SelectItem>
+                  <SelectItem value="high">₹1,00,000 - ₹2,00,000</SelectItem>
+                  <SelectItem value="very-high">More than ₹2,00,000</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="farmingExperience">Your Farming Background</Label>
+              <Select value={farmingExperience} onValueChange={setFarmingExperience}>
+                <SelectTrigger>
+                  <SelectValue placeholder="Tell us about your experience" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="new">New to Farming</SelectItem>
+                  <SelectItem value="beginner">1-2 Years Experience</SelectItem>
+                  <SelectItem value="intermediate">3-5 Years Experience</SelectItem>
+                  <SelectItem value="experienced">6-10 Years Experience</SelectItem>
+                  <SelectItem value="expert">10+ Years Experience</SelectItem>
+                  <SelectItem value="traditional">Traditional Farming Family</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="irrigationSystem">Irrigation System</Label>
+              <Select defaultValue="traditional">
+                <SelectTrigger>
+                  <SelectValue placeholder="Select irrigation method" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="traditional">Traditional Flood</SelectItem>
+                  <SelectItem value="drip">Drip Irrigation</SelectItem>
+                  <SelectItem value="sprinkler">Sprinkler System</SelectItem>
+                  <SelectItem value="subsurface">Subsurface Irrigation</SelectItem>
+                  <SelectItem value="micro">Micro Irrigation</SelectItem>
+                  <SelectItem value="none">No Irrigation System</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="machinery">Available Farm Machinery</Label>
+              <Select defaultValue="none">
+                <SelectTrigger>
+                  <SelectValue placeholder="Select available equipment" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="tractor">Tractor</SelectItem>
+                  <SelectItem value="harvester">Harvester</SelectItem>
+                  <SelectItem value="basic">Basic Tools Only</SelectItem>
+                  <SelectItem value="advanced">Advanced Machinery</SelectItem>
+                  <SelectItem value="rental">Access to Rental Equipment</SelectItem>
+                  <SelectItem value="none">No Machinery</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="laborAvailability">Labor Availability</Label>
+              <Select defaultValue="family">
+                <SelectTrigger>
+                  <SelectValue placeholder="Select labor situation" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="family">Family Labor Only</SelectItem>
+                  <SelectItem value="seasonal">Seasonal Workers Available</SelectItem>
+                  <SelectItem value="full-time">Full-time Workers Available</SelectItem>
+                  <SelectItem value="limited">Limited Labor Available</SelectItem>
+                  <SelectItem value="cooperative">Cooperative Farming</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="marketAccess">Market Access</Label>
+              <Select defaultValue="local">
+                <SelectTrigger>
+                  <SelectValue placeholder="Select market accessibility" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="local">Local Market (within 10 km)</SelectItem>
+                  <SelectItem value="regional">Regional Market (10-30 km)</SelectItem>
+                  <SelectItem value="wholesale">Wholesale Market Access</SelectItem>
+                  <SelectItem value="contract">Contract Farming</SelectItem>
+                  <SelectItem value="export">Export Market Access</SelectItem>
+                  <SelectItem value="limited">Limited Market Access</SelectItem>
                 </SelectContent>
               </Select>
             </div>
