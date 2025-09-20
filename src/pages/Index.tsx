@@ -4,7 +4,7 @@ import { AlertsSection } from "@/components/home/AlertsSection";
 import { EngagementSection } from "@/components/home/EngagementSection";
 import { KnowledgeSection } from "@/components/home/KnowledgeSection";
 import { AISuggestionsSection } from "@/components/home/AIsuggestionsSection";
-import { InteractiveMapNew } from "@/components/maps/InteractiveMapNew";
+import { FieldIntelligenceMap } from "@/components/cards/FieldIntelligenceMap";
 
 const Index = () => {
   return (
@@ -29,9 +29,11 @@ const Index = () => {
           <AlertsSection />
         </div>
 
-        {/* Interactive Map */}
-        <div className="animate-fade-in [animation-delay:300ms]">
-          <InteractiveMapNew />
+        {/* Field Intelligence Map */}
+        <div className="animate-fade-in [animation-delay:300ms] container mx-auto px-4 py-6">
+          <div className="max-w-5xl mx-auto" style={{ height: '500px' }}>
+            <FieldIntelligenceMap className="w-full h-full" />
+          </div>
         </div>
 
         {/* AI Suggestions */}
