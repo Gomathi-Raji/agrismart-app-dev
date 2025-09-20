@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AgriSmart Design System - Farmer-friendly agricultural theme
+All colors MUST be HSL.
+*/
+
+/* Tamil Font Support */
+:root {
+  font-family: 'Inter', 'Noto Sans Tamil', system-ui, -apple-system, sans-serif;
+}
+
+[lang="ta"], [lang="ta"] * {
+  font-family: 'Noto Sans Tamil', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  :root {
+    /* AgriSmart Agricultural Color Palette */
+    --background: 120 25% 98%;
+    --foreground: 120 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 120 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 120 20% 12%;
+
+    /* Primary: Deep Agricultural Green */
+    --primary: 120 60% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 45% 35%;
+
+    /* Secondary: Golden Harvest Yellow */
+    --secondary: 48 95% 55%;
+    --secondary-foreground: 120 20% 12%;
+    --secondary-glow: 48 85% 65%;
+
+    --muted: 120 15% 95%;
+    --muted-foreground: 120 10% 45%;
+
+    --accent: 120 40% 88%;
+    --accent-foreground: 120 60% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 120 15% 88%;
+    --input: 120 15% 95%;
+    --ring: 120 60% 25%;
+
+    /* AgriSmart Custom Design Tokens */
+    --success: 120 60% 35%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 48 95% 55%;
+    --warning-foreground: 120 20% 12%;
+    
+    --info: 200 80% 45%;
+    --info-foreground: 0 0% 98%;
+
+    /* Advanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(120 60% 25%), hsl(120 45% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(48 95% 55%), hsl(48 85% 65%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(120 50% 15%), hsl(120 60% 25%)), linear-gradient(135deg, hsl(120 60% 25%), hsl(120 45% 35%), hsl(48 95% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(120 25% 98%));
+    --gradient-advanced: linear-gradient(135deg, hsl(120 65% 20%), hsl(120 55% 30%), hsl(120 45% 40%));
+    --gradient-feature: linear-gradient(145deg, hsl(120 20% 98%), hsl(120 15% 96%));
+    --gradient-tech: radial-gradient(circle at center, hsl(120 40% 90%), hsl(120 25% 95%));
+
+    /* Advanced Shadows */
+    --shadow-primary: 0 10px 30px -10px hsl(120 60% 25% / 0.3);
+    --shadow-secondary: 0 10px 30px -10px hsl(48 95% 55% / 0.3);
+    --shadow-elegant: 0 20px 40px -10px hsl(120 20% 12% / 0.1);
+    --shadow-glow: 0 0 40px hsl(120 45% 35% / 0.4);
+    --shadow-advanced: 0 25px 50px -15px hsl(120 60% 25% / 0.4);
+    --shadow-tech: 0 8px 25px -8px hsl(120 40% 30% / 0.15);
+    --shadow-floating: 0 35px 60px -15px hsl(120 50% 20% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode for AgriSmart - True Black Theme */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Keep same green as light mode */
+    --primary: 120 60% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 120 45% 35%;
+
+    --secondary: 48 95% 55%;
+    --secondary-foreground: 0 0% 0%;
+    --secondary-glow: 48 85% 65%;
+
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 85%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 120 60% 25%;
+
+    /* Dark mode custom tokens */
+    --success: 120 60% 35%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 48 95% 55%;
+    --warning-foreground: 0 0% 0%;
+    
+    --info: 200 80% 45%;
+    --info-foreground: 0 0% 98%;
+
+    /* Dark gradients with same green */
+    --gradient-primary: linear-gradient(135deg, hsl(120 60% 25%), hsl(120 45% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(48 95% 55%), hsl(48 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(120 60% 25%), hsl(120 45% 35%), hsl(48 95% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 5%), hsl(0 0% 8%));
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 120 60% 25%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 120 60% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Responsive image utilities for diagnosis uploads */
+  .responsive-image {
+    @apply max-w-full h-auto object-contain rounded-lg;
+    max-height: 70vh;
+  }
+
+  .image-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    .image-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .responsive-image {
+      max-height: 50vh;
+    }
+  }
+
+  /* Mobile-first responsive utilities */
+  .container-mobile {
+    @apply px-4 mx-auto;
+    max-width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .container-mobile {
+      @apply px-6;
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container-mobile {
+      @apply px-8;
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-mobile {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-mobile {
+      max-width: 1280px;
+    }
+  }
+}

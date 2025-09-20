@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "home": { "en": "Home", "ta": "முகப்பு" },
+    "diagnose": { "en": "Diagnose", "ta": "நோய் கண்டறிதல்" },
+    "marketplace": { "en": "Marketplace", "ta": "சந்தை" },
+    "marketAnalysis": { "en": "Market Analysis", "ta": "சந்தை பகுப்பாய்வு" },
+    "weather": { "en": "Weather", "ta": "வானிலை" },
+    "profile": { "en": "Profile", "ta": "சுயவிவரம்" },
+    "signIn": { "en": "Sign In", "ta": "உள் நுழைய" },
+    "more": { "en": "More", "ta": "மேலும்" },
+    "cropsHybrid": { "en": "Crops & Hybrids", "ta": "பயிர்கள் & கலப்பினங்கள்" },
+    "governmentSchemes": { "en": "Government Schemes", "ta": "அரசு திட்டங்கள்" },
+    "sellerPanel": { "en": "Seller Panel", "ta": "விற்பனையாளர் பேனல்" },
+    "newsBlogs": { "en": "News & Blogs", "ta": "செய்திகள் & வலைப்பதிவுகள்" },
+    "admin": { "en": "Admin", "ta": "நிர்வாகி" },
+    "support": { "en": "Support", "ta": "ஆதரவு" }
+  },
+  "home": {
+    "title": { "en": "Smart Farming Solutions", "ta": "ஸ்மார்ட் விவசாய தீர்வுகள்" },
+    "subtitle": { "en": "AI-Powered Agriculture for Modern Farmers", "ta": "நவீன விவசாயிகளுக்கான AI-இயங்கும் விவசாயம்" },
+    "description": { "en": "Transform your farming with cutting-edge technology. Get instant crop disease detection, market insights, and personalized recommendations to maximize your yield and profits.", "ta": "அதிநவீன தொழில்நுட்பத்துடன் உங்கள் விவசாயத்தை மாற்றுங்கள். உடனடி பயிர் நோய் கண்டறிதல், சந்தை நுண்ணறிவு மற்றும் உங்கள் விளைச்சல் மற்றும் லாபத்தை அதிகரிக்க தனிப்பயனாக்கப்பட்ட பரிந்துரைகளைப் பெறுங்கள்." },
+    "getStarted": { "en": "Get Started", "ta": "தொடங்குங்கள்" },
+    "learnMore": { "en": "Learn More", "ta": "மேலும் அறிய" }
+  },
+  "features": {
+    "title": { "en": "Features", "ta": "அம்சங்கள்" },
+    "diseaseDetection": {
+      "title": { "en": "Disease Detection", "ta": "நோய் கண்டறிதல்" },
+      "description": { "en": "Advanced AI-powered crop disease identification", "ta": "மேம்பட்ட AI-இயங்கும் பயிர் நோய் அடையாளம்" }
+    },
+    "marketInsights": {
+      "title": { "en": "Market Insights", "ta": "சந்தை நுண்ணறிவு" },
+      "description": { "en": "Real-time market prices and trends analysis", "ta": "நிகழ்நேர சந்தை விலைகள் மற்றும் போக்கு பகுப்பாய்வு" }
+    },
+    "weatherForecast": {
+      "title": { "en": "Weather Forecast", "ta": "வானிலை முன்னறிவிப்பு" },
+      "description": { "en": "Accurate weather predictions for farming", "ta": "விவசாயத்திற்கான துல்லியமான வானிலை கணிப்புகள்" }
+    }
+  },
+  "stats": {
+    "farmers": { "en": "Active Farmers", "ta": "செயலில் உள்ள விவசாயிகள்" },
+    "accuracy": { "en": "Disease Detection Accuracy", "ta": "நோய் கண்டறிதல் துல்லியம்" },
+    "crops": { "en": "Supported Crops", "ta": "ஆதரிக்கப்படும் பயிர்கள்" },
+    "regions": { "en": "Regions Covered", "ta": "மூடப்பட்ட பகுதிகள்" }
+  },
+  "testimonials": {
+    "title": { "en": "What Farmers Say", "ta": "விவசாயிகள் என்ன சொல்கிறார்கள்" },
+    "subtitle": { "en": "Real success stories from our farming community", "ta": "எங்கள் விவசாய சமூகத்தின் உண்மையான வெற்றிக் கதைகள்" }
+  },
+  "cta": {
+    "title": { "en": "Ready to Transform Your Farm?", "ta": "உங்கள் பண்ணையை மாற்ற தயாரா?" },
+    "subtitle": { "en": "Join thousands of farmers who are already using AgriSmart to increase their yields and profits.", "ta": "ஏற்கனவே AgriSmart ஐப் பயன்படுத்தி தங்கள் விளைச்சல் மற்றும் லாபத்தை அதிகரிக்கும் ஆயிரக்கணக்கான விவசாயிகளுடன் சேருங்கள்." },
+    "startFree": { "en": "Start Free Trial", "ta": "இலவச சோதனையைத் தொடங்குங்கள்" },
+    "contactSales": { "en": "Contact Sales", "ta": "விற்பனையைத் தொடர்பு கொள்ளுங்கள்" }
+  },
+  "footer": {
+    "description": { "en": "Empowering farmers with AI-driven solutions for sustainable and profitable agriculture.", "ta": "நிலையான மற்றும் இலாபகரமான விவசாயத்திற்கான AI-உந்துதல் தீர்வுகளுடன் விவசாயிகளை மேம்படுத்துதல்." },
+    "quickLinks": { "en": "Quick Links", "ta": "விரைவு இணைப்புகள்" },
+    "services": { "en": "Services", "ta": "சேவைகள்" },
+    "support": { "en": "Support", "ta": "ஆதரவு" },
+    "about": { "en": "About Us", "ta": "எங்களை பற்றி" },
+    "contact": { "en": "Contact", "ta": "தொடர்பு" },
+    "privacy": { "en": "Privacy Policy", "ta": "தனியுரிமை கொள்கை" },
+    "terms": { "en": "Terms of Service", "ta": "சேவை விதிமுறைகள்" },
+    "allRightsReserved": { "en": "All rights reserved.", "ta": "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை." }
+  },
+  "common": {
+    "loading": { "en": "Loading...", "ta": "ஏற்றுகிறது..." },
+    "error": { "en": "Error", "ta": "பிழை" },
+    "success": { "en": "Success", "ta": "வெற்றி" },
+    "cancel": { "en": "Cancel", "ta": "ரத்து செய்" },
+    "save": { "en": "Save", "ta": "சேமி" },
+    "delete": { "en": "Delete", "ta": "நீக்கு" },
+    "edit": { "en": "Edit", "ta": "திருத்து" },
+    "view": { "en": "View", "ta": "பார்வை" },
+    "search": { "en": "Search", "ta": "தேடல்" },
+    "filter": { "en": "Filter", "ta": "வடிகட்டி" },
+    "sort": { "en": "Sort", "ta": "வரிசை" },
+    "next": { "en": "Next", "ta": "அடுத்து" },
+    "previous": { "en": "Previous", "ta": "முந்தைய" },
+    "submit": { "en": "Submit", "ta": "சமர்ப்பிக்கவும்" },
+    "close": { "en": "Close", "ta": "மூடு" }
+  }
+}
