@@ -15,6 +15,31 @@ All colors MUST be HSL.
   font-family: 'Noto Sans Tamil', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* Prevent zooming for app-like experience */
+* {
+  touch-action: manipulation;
+}
+
+html, body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection only for specific elements */
+input, textarea, [contenteditable] {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 @layer base {
   :root {
     /* AgriSmart Agricultural Color Palette */
