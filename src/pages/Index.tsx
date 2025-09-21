@@ -30,9 +30,11 @@ const Index = () => {
         </div>
 
         {/* Field Intelligence Map */}
-        <div className="animate-fade-in [animation-delay:300ms] container mx-auto px-4 py-6">
-          <div className="max-w-5xl mx-auto" style={{ height: '500px' }}>
-            <FieldIntelligenceMap className="w-full h-full" />
+        <div className="animate-fade-in [animation-delay:300ms]">
+          <div className="container mx-auto px-4 py-8">
+            <div className="max-w-7xl mx-auto">
+              <FieldIntelligenceMap className="w-full" />
+            </div>
           </div>
         </div>
 

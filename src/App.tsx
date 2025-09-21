@@ -25,6 +25,9 @@ import Admin from "./pages/Admin";
 import Recommendations from "./pages/Recommendations";
 import Hybrid from "./pages/Hybrid";
 import Community from "./pages/Community";
+import Farms from "./pages/Farms";
+import Marketplace from "./pages/Marketplace";
+import Offices from "./pages/Offices";
 
 const queryClient = new QueryClient();
 
@@ -71,6 +74,9 @@ const App = () => (
             <Route path="/crops-hybrid" element={<Layout><div className="p-8 text-center"><h1 className="text-2xl">Crops & Hybrids - Coming Soon</h1></div></Layout>} />
             <Route path="/hybrid" element={<Layout><Hybrid /></Layout>} />
             <Route path="/community" element={<Layout><Community /></Layout>} />
+            <Route path="/farms" element={<Layout><Farms /></Layout>} />
+            <Route path="/marketplace" element={<Layout><Marketplace /></Layout>} />
+            <Route path="/offices" element={<Layout><Offices /></Layout>} />
             <Route path="/support" element={<Layout><div className="p-8 text-center"><h1 className="text-2xl">Support & Community - Coming Soon</h1></div></Layout>} />
             
             {/* Legal pages */}
