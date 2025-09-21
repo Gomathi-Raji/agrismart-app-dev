@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SettingsModal } from "@/components/SettingsModal";
-import { LanguageTranslator } from "@/components/LanguageTranslator";
+
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -81,17 +81,13 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-elegant">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
+            {/* Logo Only */}
+            <Link to="/" className="flex items-center group">
               <img 
                 src="/lovable-uploads/logo.png" 
                 alt="AgriSmart Logo" 
                 className="w-10 h-10 object-contain group-hover:scale-105 transition-transform"
               />
-              <div className="flex flex-col">
-                <span className="font-bold text-xl text-primary">AgriSmart</span>
-                <span className="text-xs text-muted-foreground hidden sm:block">Smart Farming Solutions</span>
-              </div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -175,9 +171,7 @@ export function Header() {
 
             {/* Right Actions */}
             <div className="flex items-center space-x-3">
-              {/* Language Translator */}
-              <LanguageTranslator />
-              
+            
               {/* Search Button */}
               <Button variant="ghost" size="icon" className="hidden md:flex">
                 <Search className="h-4 w-4" />

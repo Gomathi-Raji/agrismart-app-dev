@@ -7,7 +7,8 @@ import {
   Users, 
   BarChart3, 
   BookOpen, 
-  Headphones 
+  Headphones,
+  Cloud
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -23,6 +24,15 @@ export function QuickActionsGrid() {
       emoji: "🧪",
       description: "AI crop analysis"
     },
+    {
+      id: "weather",
+      title: "Weather & Forecast",
+      icon: Cloud,
+      route: "/weather",
+      emoji: "🌦️",
+      description: "Local weather & forecast"
+    },
+    
     {
       id: "marketplace",
       title: "Marketplace",
@@ -49,12 +59,12 @@ export function QuickActionsGrid() {
       description: "Analytics dashboard"
     },
     {
-      id: "knowledge",
-      title: "Knowledge Hub",
+      id: "news",
+      title: "News & Articles",
       icon: BookOpen,
-      route: "/blog",
-      emoji: "📚",
-      description: "Learning resources"
+      route: "/blogs",
+      emoji: "📰",
+      description: "Latest agri news & tips"
     },
     {
       id: "support",

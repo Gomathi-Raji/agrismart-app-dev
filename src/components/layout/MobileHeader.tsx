@@ -75,10 +75,6 @@ export function MobileHeader() {
             alt="AgriSmart Logo" 
             className="w-8 h-8 object-contain group-hover:scale-105 transition-transform"
           />
-          <div className="flex flex-col">
-            <span className="font-bold text-lg text-primary">AgriSmart</span>
-            <span className="text-xs text-muted-foreground hidden sm:block">Smart Farming</span>
-          </div>
         </Link>
 
         {/* Right Actions */}
@@ -133,7 +129,7 @@ export function MobileHeader() {
 
           {/* Language Translator */}
           <div className="h-9 flex items-center">
-            <div className="elfsight-app-c998736f-4dcd-413c-bfcb-5560a365b817" data-elfsight-app-lazy />
+            <div className="elfsight-app-9fb4adf9-c81b-4f41-a0d1-d920653dd109" data-elfsight-app-lazy />
           </div>
 
           {/* Compact Weather Widget */}
@@ -169,7 +165,7 @@ export function MobileHeader() {
                   <nav className="px-6 space-y-2">
                     {/* Language Translator */}
                     <div className="px-3 py-2">
-                      <div className="elfsight-app-c998736f-4dcd-413c-bfcb-5560a365b817" data-elfsight-app-lazy />
+                      <div className="elfsight-app-9fb4adf9-c81b-4f41-a0d1-d920653dd109" data-elfsight-app-lazy />
                     </div>
 
                     {navItems.map((item) => (

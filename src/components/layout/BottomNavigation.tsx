@@ -47,7 +47,7 @@ export function BottomNavigation() {
               key={item.path}
               to={item.path}
               className={cn(
-                "flex flex-col items-center space-y-1 p-2 rounded-lg min-w-[60px] transition-colors",
+                "flex flex-col items-center p-2 rounded-lg min-w-[60px] transition-colors",
                 isActiveItem
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -57,7 +57,6 @@ export function BottomNavigation() {
                 "h-5 w-5 transition-transform",
                 isActiveItem ? "scale-110" : ""
               )} />
-              <span className="text-xs font-medium">{item.name}</span>
             </Link>
           );
         })}
